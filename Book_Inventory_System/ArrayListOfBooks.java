@@ -34,6 +34,7 @@ public class ArrayListOfBooks {
         }
 
         // 3. Display titles of all Fantasy books
+        System.out.println("Fantasy Books:");
         bookList.forEach(b -> {
             if (b.genre.equals("Fantasy")) {
                 System.out.println(b.getTitle());
