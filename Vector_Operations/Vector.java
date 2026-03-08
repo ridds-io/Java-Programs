@@ -127,9 +127,10 @@ public class Vector {
 
     public static void main(String[] args) {
         try {
-            Vector v1 = new Vector(1, 2);
-            Vector v2 = new Vector(3, 4);
+            Vector v1 = new Vector(5, 9);
+            Vector v2 = new Vector(12, 4);
             Vector v3 = new Vector(5, 6, 7);
+            Vector v4 = new Vector(1, 21, 0);
 
             System.out.println("v1:");
             v1.display();
@@ -143,10 +144,19 @@ public class Vector {
             v3.display();
             System.out.println("");
 
+            System.out.println("v4:");
+            v4.display();
+            System.out.println("");
+
             // Test addition
             Vector sum = v1.add(v2);
             System.out.println("v1 + v2:");
             sum.display();
+            System.out.println("");
+
+            Vector sum1 = v3.add(v4);
+            System.out.println("v3 + v4:");
+            sum1.display();
             System.out.println("");
 
             // Test subtraction
@@ -160,7 +170,7 @@ public class Vector {
             System.out.println("v1 . v2: " + dot);
             System.out.println("");
 
-            // Test dimension mismatch
+            // Test dimension mismatch when performing operations
             try {
                 v1.add(v3);
             } catch (InvalidDimensionException e) {
